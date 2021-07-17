@@ -1,4 +1,4 @@
-package com.musafi.bookslist;
+package com.musafi.bookslist.models;
 
 public class MyRBG {
     private int red;

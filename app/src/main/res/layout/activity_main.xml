@@ -32,7 +32,7 @@
 
 
     <LinearLayout
-        android:id="@+id/main_LL"
+        android:id="@+id/main_LL_linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -51,7 +51,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@color/teal_200"
-                android:gravity="center"
+                android:gravity="center_horizontal"
+                android:paddingTop="25dp"
                 android:text="Books"
                 android:textSize="25sp"
                 android:textStyle="bold" />
@@ -73,7 +74,7 @@
     </LinearLayout>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
+        android:id="@+id/main_CV_cardView"
         android:layout_width="300dp"
         android:layout_height="50dp"
         app:cardCornerRadius="90dp"
@@ -86,6 +87,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@android:color/background_light"
+            app:queryBackground="@android:color/transparent"
             android:paddingStart="10dp"
             app:closeIcon="@null"
             app:iconifiedByDefault="false"

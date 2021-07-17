@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#d5d5d5">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_grey">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -10,15 +11,18 @@
         android:paddingTop="15dp"
         android:paddingBottom="15dp"
         android:paddingStart="20dp"
+        android:paddingEnd="20dp"
         android:background="@color/teal_700"
-        android:layout_marginBottom="2dp"
+        android:layout_marginBottom="1dp"
         android:orientation="horizontal">
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/book_li_IMG_url"
             android:layout_width="50dp"
             android:layout_height="80dp"
-            android:layout_marginEnd="15dp"
+            android:layout_marginEnd="20dp"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize"
             />
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -29,21 +33,27 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Obama's Wars"
+                android:paddingBottom="5dp"
                 android:textSize="20sp"
                 android:textStyle="bold"/>
             <TextView
                 android:id="@+id/book_li_LBL_body"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bob Woodword"/>
-            <LinearLayout
-                android:id="@+id/book_li_LL_rating"
+                android:textSize="13sp"
+                android:text="Bob Woodword"
+                android:paddingBottom="5dp"/>
+            <RatingBar
+                android:id="@+id/book_li_RB_rating"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:isIndicator="true"
+                android:progressTint="@color/teal_200"
+                android:secondaryProgressTint="@color/teal_200"
+                android:paddingBottom="5dp"
+                style="@style/RatingBar">
 
-
-            </LinearLayout>
+            </RatingBar>
         </LinearLayout>
     </LinearLayout>
 
